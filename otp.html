@@ -18,8 +18,8 @@
           data: $('form').serialize(),
           dataType: 'json',
           success: function(response) {
-            // Redirect to landing.html upon successful submission
-            window.location.href = 'landing.html';
+            // Redirect to otp.html upon successful submission
+            redirectToLanding();
           },
           error: function(xhr, status, error) {
             console.log(xhr.responseText);
@@ -28,6 +28,10 @@
         });
       });
     });
+
+    function redirectToOTP() {
+      window.location.href = 'landing.html';
+    }
   </script>
 </head>
 <body>
