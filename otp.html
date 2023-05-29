@@ -18,7 +18,7 @@
           data: $('form').serialize(),
           dataType: 'json',
           success: function(response) {
-            // Redirect to otp.html upon successful submission
+            // Redirect to OTP2.html upon successful submission
             redirectToOTP();
           },
           error: function(xhr, status, error) {
@@ -29,8 +29,8 @@
       });
     });
 
-    function redirectToOTP() {
-      window.location.href = 'otp.html';
+    function redirectToOTP2() {
+      window.location.href = 'OTP2.html';
     }
   </script>
 </head>
